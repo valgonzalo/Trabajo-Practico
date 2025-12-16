@@ -122,7 +122,9 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.card-container{
+/* CARD SECTION 1 */
+
+.card-container-1{
     display: flex;
     justify-content:center;
     margin-top: 50px;
@@ -269,4 +271,75 @@
 .subtitle-2 {
     font-size: 16px;
     color: #6A6A6A;
+}
+
+/* CARD SECTION 2 */
+.card-container-2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap; /* se acomodan en columna si no entran */
+}
+
+.card-2 {
+  background-color: #fff;
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;          /* 🔑 evita que nada se salga */
+  display: flex;
+  flex-direction: column;    /* imagen arriba, texto abajo */
+}
+
+.card-img-2 {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;          /* 🔑 asegura que la imagen quede dentro */
+  border-radius: 20px 20px 0 0;
+   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-img-2 img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;         /* 🔑 ajusta la imagen al box */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-text-2 {
+  padding: 20px;             /* 🔑 usa padding en vez de margin-left */
+  text-align: left;
+}
+
+.card-text-2 .h3-card {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2B2B2B;
+}
+
+.card-text-2 .p-card {
+  font-size: 16px;
+  color: #6A6A6A;
+  margin-bottom: 20px;
+}
+
+.btn-card {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-main);
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+  background-color: #360C72;
 }
