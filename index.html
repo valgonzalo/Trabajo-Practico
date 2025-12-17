@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TP Nave Web</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
       <div class="cards">
         <div class="card">
           <div class="card-icon">
-            <img src="./Images/card1.png" alt="Icono calendario" />
+            <i class="bi bi-cash"></i>
           </div>
           <div class="card-content">
             <h3>Elegí cuándo acreditar tus ventas</h3>
@@ -47,7 +48,7 @@
 
         <div class="card">
           <div class="card-icon">
-            <img src="./Images/card2.png" alt="Icono gráfico" />
+            <i class="bi bi-graph-up-arrow"></i>
           </div>
           <div class="card-content">
             <h3>Ganás más con costos bajos</h3>
@@ -57,7 +58,7 @@
 
         <div class="card">
           <div class="card-icon">
-            <img src="./Images/card3.png" alt="Icono descuento" />
+            <i class="bi bi-coin"></i>
           </div>
           <div class="card-content">
             <h3>Vendés más con promos a tu medida</h3>
@@ -81,29 +82,71 @@
         Elegí las opciones que mejor se ajustan a tu negocio.
       </p>
 
-      <div class="cards">
-        <div class="card payment-card">
+      <div class="cards-end">
+        <!-- Fila 1 -->
+        <!-- Tarjeta 1: QR -->
+        <div class="payment-card">
           <div class="card-image">
             <img src="./Images/card4.png" alt="QR para pagos" />
           </div>
           <div class="card-content">
-            <h3>Cobrá con QR</h3>
-            <p>Ideal para cobrar en tu local sin manejar efectivo.</p>
+            <div class="payment-header">
+              <span class="payment-tag">QR</span>
+              <h3 class="payment-title">Ideal para cobrar en tu local o desde donde prefieras sin manejar efectivo.</h3>
+            </div>
             <a href="#" class="card-link">Conocer más</a>
           </div>
         </div>
 
-        <div class="card payment-card">
+        <!-- Tarjeta 2: Link de pago -->
+        <div class="payment-card reverse">
+          <div class="card-image">
+            <img src="./Images/card5.png" alt="Link de pago" />
+          </div>
+          <div class="card-content">
+            <div class="payment-header">
+              <span class="payment-tag">Link de pago</span>
+              <h3 class="payment-title">La forma más fácil de vender por chat y redes sociales. Compartí el link y
+                cobrá, sin contacto físico.</h3>
+            </div>
+            <a href="#" class="card-link">Conocer más</a>
+          </div>
+        </div>
+
+        <!-- Fila 2 -->
+        <!-- Tarjeta 3: Terminal Nave Point -->
+        <div class="payment-card">
           <div class="card-image">
             <img src="./Images/card5.png" alt="Terminal de pago" />
           </div>
           <div class="card-content">
-            <h3>Terminal Nave Point</h3>
-            <p>Aceptá pagos con tarjetas de forma rápida y segura.</p>
+            <div class="payment-header">
+              <span class="payment-tag">Terminal Nave Point</span>
+              <h3 class="payment-title">Aceptá pagos con tarjetas de débito y crédito en tu local de forma rápida y
+                segura.</h3>
+            </div>
+            <a href="#" class="card-link">Conocer más</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Tienda online -->
+        <div class="payment-card reverse">
+          <div class="card-image">
+            <img src="./Images/card4.png" alt="Tienda online" />
+          </div>
+          <div class="card-content">
+            <div class="payment-header">
+              <span class="payment-tag">Tienda online</span>
+              <h3 class="payment-title">Ofrecé una experiencia de pago sin fricciones aceptando pagos con todos los
+                medios de cobro.</h3>
+            </div>
             <a href="#" class="card-link">Conocer más</a>
           </div>
         </div>
       </div>
+
+
+
     </section>
   </main>
 

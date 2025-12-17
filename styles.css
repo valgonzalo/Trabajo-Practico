@@ -33,14 +33,18 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 7rem;
-    height: 83px;
+    padding: 1rem 6rem;
+    height: 75px;
 }
 
+.logo-header {
+    height: 40px;
+    margin-left: 20px;
+}
 
 .nav-links {
     display: flex;
@@ -53,6 +57,7 @@ body {
     color: black;
     font-weight: 700;
     font-size: 14px;
+    line-height: 24px;
     padding: 10px 25px;
     border-radius: 50px;
     transition: 0.3s;
@@ -62,7 +67,6 @@ body {
     background: var(--color3);
     color: var(--color2);
 }
-
 
 .border {
     border: 1px solid var(--color1);
@@ -118,30 +122,36 @@ body {
     margin-bottom: 3rem;
 }
 
-/* CARDS */
+/* FEATURES SECTION */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 2rem;
+}
+
+/* CARDS para FEATURES (3 en fila) */
 .cards {
     display: flex;
-    flex-direction:row;
     justify-content: center;
-    align-items: center;
     gap: 30px;
     margin: 3rem auto;
     flex-wrap: wrap;
-    max-width: 1200px;
 }
 
-.card {
+.features .card {
     background: white;
     border-radius: 20px;
     padding: 1.5rem;
     width: 100%;
     max-width: 316px;
-    max-height: 259px;
+    min-height: 259px;
     transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.card:hover {
+.features .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
@@ -149,24 +159,12 @@ body {
     height: 62px;
     background: var(--color4);
     border-radius: 12px;
+    font-size: 24px;
+    color: #6E2BDF;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-}
-
-.card-image {
-    width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .card-content h3 {
@@ -184,31 +182,6 @@ body {
     text-align: left;
 }
 
-.card-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background: var(--color1);
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.card-link:hover {
-    background: var(--color2);
-}
-
-/* CARD ESPECIAL */
-.payment-card {
-    padding: 0;
-}
-
-.payment-card .card-content {
-    padding: 1.5rem;
-}
-
 /* BANNER */
 .banner {
     background: var(--color2);
@@ -218,14 +191,13 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-    margin: 3rem auto;
+    margin: 3rem auto 0;
 }
 
 .banner-text h3 {
     color: white;
     font-size: 1.875rem;
     margin-bottom: 0.5rem;
-    display: flex;
 }
 
 .banner-text p {
@@ -251,11 +223,199 @@ body {
     color: var(--color3);
 }
 
-/* SECTIONS */
-.features,
+/* PAYMENTS SECTION - 4 tarjetas en UNA columna */
 .payments {
-    padding: 4rem 2rem;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 2rem;
+}
+
+/* Contenedor de tarjetas en UNA columna */
+.cards-end {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Tarjetas horizontales del mismo tamaño */
+.payment-card {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    min-height: 220px;
+    height: 350px; /* Altura fija para todas */
+    width: 100%; /* Ancho completo */
+}
+
+/* Tarjeta normal (imagen izquierda) */
+.payment-card {
+    flex-direction: row;
+}
+
+/* Tarjeta reversa (imagen derecha) */
+.payment-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen lateral */
+.card-image {
+    flex: 0 0 220px; /* Ancho fijo para imagen */
+    background: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 100%; /* Altura completa */
+}
+
+.card-image img {
+    width: 100px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en toda la tarjeta que cambia la imagen */
+.payment-card:hover .card-image img {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(2000%) hue-rotate(250deg);
+}
+
+/* Contenido de las tarjetas */
+.payment-card .card-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header de la tarjeta */
+.payment-header {
+    margin-bottom: 1rem;
+}
+
+.payment-tag {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color1);
+    background: var(--color3);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.payment-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color6);
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Enlace */
+.payment-card .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.payment-card .card-link:hover {
+    background: var(--color2);
+    gap: 12px;
+}
+
+.payment-card .card-link::after {
+    content: "→";
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.payment-card .card-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* RESPONSIVE para tarjetas en columna */
+@media (max-width: 900px) {
+    .payment-card {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .payment-card.reverse {
+        flex-direction: column;
+    }
+    
+    .card-image {
+        flex: 0 0 160px;
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .payment-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-image {
+        flex: 0 0 140px;
+        padding: 1rem;
+    }
+    
+    .card-image img {
+        width: 80px;
+    }
+    
+    .payment-card .card-content {
+        padding: 1.5rem;
+    }
+    
+    .payment-title {
+        font-size: 18px;
+    }
+    
+    .payment-tag {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-card .card-content {
+        padding: 1.5rem;
+    }
+    
+    .payment-title {
+        font-size: 22px;
+    }
+    
+    .payment-details {
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+    }
 }
 
 /* RESPONSIVE */
@@ -280,6 +440,37 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .banner-btn {
+        width: 100%;
+    }
+
+    /* Payment cards responsive */
+    .payment-card {
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .card-image {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+    
+    .payment-card .card-content {
+        padding: 1.5rem;
+    }
+    
+    .payment-card h3 {
+        font-size: 24px;
+    }
+    
+    .payment-card p {
+        font-size: 18px;
     }
 }
 
@@ -297,7 +488,12 @@ body {
         font-size: 1.75rem;
     }
 
-    .card {
+    .features .card {
         max-width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
     }
 }
