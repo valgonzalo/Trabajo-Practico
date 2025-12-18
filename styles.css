@@ -467,36 +467,40 @@ body {
 /* DESDE 1179px HACIA ABAJO (hasta 1178px) */
 @media (max-width: 1178px) {
 
-    /* Header mobile - hamburguesa izquierda, logo centro */
+    /* Header mobile - CORRECCIÓN */
     .header {
         height: 64px;
         padding: 0 16px;
-        justify-content: flex-start;
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .menu-btn {
         display: flex;
-        margin-right: 10px;
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        margin: 0;
     }
 
     .logo-mobile {
         display: flex;
-        flex: 1;
-        justify-content: center;
-        margin: 0 auto;
-        position: relative;
-        left: 0;
-        right: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
     }
 
     .logo-mobile img {
         height: 32px;
-        margin-top: 15px;
+        margin-top: 0;
     }
 
     /* Ocultar navegación desktop */
@@ -512,6 +516,8 @@ body {
         z-index: 999;
         flex-direction: column;
         align-items: flex-start;
+        max-width: none;
+        margin: 0;
     }
 
     .nav.active {
@@ -672,6 +678,41 @@ body {
 
 /* Tablet (768px y menos) */
 @media (max-width: 768px) {
+
+    /* Header mobile - CORRECCIÓN */
+    .header {
+        height: 64px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+        position: static;
+        transform: none;
+        margin: 0;
+    }
+
+    .logo-mobile {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .logo-mobile img {
+        height: 32px;
+        margin-top: 0;
+    }
+
     .title {
         font-size: 28px;
     }
@@ -711,12 +752,11 @@ body {
         font-size: 24px;
         width: 36px;
         height: 36px;
-        left: 12px;
     }
 
     .logo-mobile img {
         height: 28px;
-        margin-top: 15px;
+        margin-top: 0;
     }
 
     .nav {
@@ -834,13 +874,11 @@ body {
         font-size: 22px;
         width: 32px;
         height: 32px;
-        left: 8px;
-        margin-right: 0;
     }
 
     .logo-mobile img {
         height: 24px;
-        margin-top: 15px;
+        margin-top: 0;
     }
 
     .nav {
@@ -1042,5 +1080,52 @@ body {
     .card-image img {
         max-width: 350px;
         max-height: 250px;
+    }
+}
+
+/* ===== CORRECCIÓN HEADER 1179px-768px ===== */
+
+/* Para asegurar que el header se vea bien en todo el rango mobile */
+@media (max-width: 1178px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Forzar que los elementos mobile se muestren y desktop se oculten */
+    .menu-btn {
+        display: flex;
+        position: static;
+        transform: none;
+        margin: 0;
+    }
+
+    .logo-mobile {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
+
+/* Para desktop (1179px+) asegurar que se vea el header desktop */
+@media (min-width: 1179px) {
+
+    .menu-btn,
+    .logo-mobile {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
     }
 }
