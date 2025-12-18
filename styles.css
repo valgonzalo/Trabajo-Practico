@@ -467,7 +467,7 @@ body {
 /* DESDE 1179px HACIA ABAJO (hasta 1178px) */
 @media (max-width: 1178px) {
 
-    /* Header mobile - CORRECCIÓN */
+    /* Header mobile */
     .header {
         height: 64px;
         padding: 0 16px;
@@ -503,7 +503,7 @@ body {
         margin-top: 0;
     }
 
-    /* Ocultar navegación desktop */
+    /* Ocultar nav desktop */
     .nav {
         display: none;
         position: fixed;
@@ -663,7 +663,7 @@ body {
         flex-direction: column;
     }
 
-    /* LOGO ARRIBA DE "Nave" - PARTE IMPORTANTE */
+    /* LOGO ARRIBA DE "Nave" - */
     .footer-image {
         order: -1;
         margin-bottom: 20px;
@@ -676,7 +676,7 @@ body {
     }
 }
 
-/* Tablet (768px y menos) */
+/* Otra Res (768px y menos) */
 @media (max-width: 768px) {
 
     /* Header mobile - CORRECCIÓN */
@@ -721,7 +721,7 @@ body {
         font-size: 15px;
     }
 
-    /* Ajustes para tablets más pequeñas */
+    /* Ajustes para celus más chicos */
     .banner {
         flex-direction: column;
         text-align: center;
@@ -739,7 +739,7 @@ body {
     }
 }
 
-/* Mobile pequeño (480px y menos) */
+/* celu chico (480px y menos) */
 @media (max-width: 480px) {
 
     /* Header más compacto */
@@ -861,7 +861,7 @@ body {
     }
 }
 
-/* Mobile muy pequeño (320px) */
+/* celu demasiado chico (320px) */
 @media (max-width: 320px) {
 
     /* Header ultra compacto */
@@ -891,7 +891,7 @@ body {
         font-size: 14px;
     }
 
-    /* Hero ultra ajustado */
+    /* Hero re contra re ajustado */
     .hero {
         padding: 76px 8px 8px;
     }
@@ -1021,7 +1021,7 @@ body {
 /* Desktop (1179px en adelante) */
 @media (min-width: 1179px) {
 
-    /* Ocultar elementos mobile en desktop */
+    /* Ocultar elementos del cel en desktop */
     .menu-btn {
         display: none;
     }
@@ -1030,7 +1030,7 @@ body {
         display: none;
     }
 
-    /* Mostrar navegación desktop */
+    /* Mostrar nav desktop */
     .nav {
         display: flex;
     }
@@ -1060,7 +1060,7 @@ body {
     }
 }
 
-/* Desktop extra grande (1200px en adelante) */
+/* Desktop super grande (1200px en adelante) */
 @media (min-width: 1179px) {
 
     /* Layout horizontal para payment cards */
@@ -1083,9 +1083,9 @@ body {
     }
 }
 
-/* ===== CORRECCIÓN HEADER 1179px-768px ===== */
+/* ===== HEADER 1179px-768px ===== */
 
-/* Para asegurar que el header se vea bien en todo el rango mobile */
+/* Para asegurar que el header se vea bien en todo el rango del celu */
 @media (max-width: 1178px) {
     .header {
         display: flex;
@@ -1093,7 +1093,7 @@ body {
         justify-content: space-between;
     }
 
-    /* Forzar que los elementos mobile se muestren y desktop se oculten */
+    /* Forzar que los elementos del celu se muestren y desktop se oculten */
     .menu-btn {
         display: flex;
         position: static;
