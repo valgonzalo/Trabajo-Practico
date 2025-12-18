@@ -11,6 +11,11 @@
 
 <body>
   <header class="header">
+    <button class="menu-btn">☰</button>
+
+    <a href="#" class="logo-mobile">
+      <img src="./Images/LogoNave-Mobile.jpg" alt="Logo">
+    </a>
     <nav class="nav">
       <a href="#" class="logo">
         <img src="https://navenegocios.ar/content/dam/galicia/nave/images/logo/Logo%20Nave.jpg" alt="Logo Nave"
@@ -150,19 +155,27 @@
 
   <footer class="footer">
     <div class="footer-container">
-      <!-- Columna 1: Nave -->
-      <div class="footer-column">
-        <h3 class="footer-title">Nave</h3>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">Cobrá con Nave</a></li>
-          <li><a href="#" class="footer-link">Entrar a Nave</a></li>
-          <li><a href="#" class="footer-link">El blog de Nave</a></li>
-          <li><a href="#" class="footer-link">Empezar a cobrar</a></li>
-          <li><a href="#" class="footer-link">Abrir cuenta en Galicia</a></li>
-          <li><a href="#" class="footer-link">Cobranzas integradas</a></li>
-          <li><a href="#" class="footer-link">Nave Developers</a></li>
-          <li><a href="#" class="footer-link">Integraciones</a></li>
-        </ul>
+      <!-- Columna 1: Nave CON LOGO ARRIBA -->
+      <div class="footer-column footer-column-with-image">
+        <!-- Logo ARRIBA del título -->
+        <div class="footer-image">
+          <img src="./Images/LogoNave-Mobile.jpg" alt="Nave" />
+        </div>
+
+        <!-- Título y enlaces DEBAJO del logo -->
+        <div>
+          <h3 class="footer-title">Nave</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Cobrá con Nave</a></li>
+            <li><a href="#" class="footer-link">Entrar a Nave</a></li>
+            <li><a href="#" class="footer-link">El blog de Nave</a></li>
+            <li><a href="#" class="footer-link">Empezar a cobrar</a></li>
+            <li><a href="#" class="footer-link">Abrir cuenta en Galicia</a></li>
+            <li><a href="#" class="footer-link">Cobranzas integradas</a></li>
+            <li><a href="#" class="footer-link">Nave Developers</a></li>
+            <li><a href="#" class="footer-link">Integraciones</a></li>
+          </ul>
+        </div>
       </div>
 
       <!-- Columna 2: Medios de cobro -->
@@ -185,19 +198,12 @@
         </ul>
       </div>
 
-      <!-- Columna 4: Te puede interesar + Imagen -->
-      <div class="footer-column footer-column-with-image">
-        <div>
-          <h3 class="footer-title">Te puede interesar</h3>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">Galicia</a></li>
-          </ul>
-        </div>
-
-        <!-- Imagen -->
-        <div class="footer-image">
-          <img src="./Images/LogoNave-Mobile.jpg" alt="Nave" />
-        </div>
+      <!-- Columna 4: Te puede interesar -->
+      <div class="footer-column">
+        <h3 class="footer-title">Te puede interesar</h3>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Galicia</a></li>
+        </ul>
       </div>
     </div>
   </footer>
